@@ -37,7 +37,7 @@ window.addEventListener('load', function() {
 const store = configureStore({
   nonce: 0,
   web3Found: false,
-  web3,
+  web3: typeof web3 !== 'undefined' ? web3 : undefined,
   loading: true,
 })
 
