@@ -55,6 +55,11 @@ AppRoot.prototype.render = function () {
       h('br'),
       error ? h('span', { style: { color: '#212121' } }, error) : null,
 
+      h('a', {
+        href: 'https://github.com/flyswatter/metamaskstack',
+        },
+      'Fork me on GitHub to play with MetaMask.'),
+
     ])
   )
 }
