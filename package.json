@@ -25,6 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "ethjs": "^0.2.4",
+    "metamascara": "^1.1.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-hyperscript": "^2.4.0",

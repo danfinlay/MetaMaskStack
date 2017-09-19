@@ -64,12 +64,12 @@ AppRoot.prototype.render = function () {
   )
 }
 
-AppRoot.prototype.sendTip = function() {
-  const { eth } = this.props
+AppRoot.prototype.sendTip = async function () {
+  const { eth, account } = this.props
 
   this.props.dispatch({ type: 'SHOW_LOADING' })
   eth.sendTransaction({
-    from: web3.eth.accounts[0],
+    from: account,
     value: Eth.toWei('1', 'ether'),
     // Dan!
     to: '0x55e2780588aa5000F464f700D2676fD0a22Ee160',
@@ -81,7 +81,8 @@ AppRoot.prototype.sendTip = function() {
       type: 'INCREMENT_NONCE',
     })
   })
-  .catch(() => {
+  .catch((reason) => {
+    console.error(reason)
     this.props.dispatch({ type: 'HIDE_LOADING' })
     this.props.dispatch({
       type: 'SHOW_ERROR',
