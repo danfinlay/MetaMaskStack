@@ -1,6 +1,6 @@
 # The MetaMask Stack
 
-[Live Example](https://flyswatter.github.io/MetaMaskStack/)
+[Live Example](https://danfinlay.github.io/MetaMaskStack/)
 
 A composable boilerplate for writing Ethereum dapps in a similar environment to what the MetaMask developers use themselves to develop MetaMask.
 
